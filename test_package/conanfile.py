@@ -22,4 +22,4 @@ class TsjConanTestConan(ConanFile):
     def test(self):
         if not tools.cross_building(self):
             os.chdir("bin")
-            self.run(".%syahahaExample" % os.sep)
+            self.run(".%syahahaexample" % os.sep)

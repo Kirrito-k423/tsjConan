@@ -39,7 +39,7 @@
 #define valuePrintName(name,a) \
     do { std::cout << FYEL("Value ") << (name) << FYEL(" is ") << (a) << std::endl; } while(false)
 
-#ifdef DEBUG
+#ifndef NDEBUG
     #define valuePrint(a) valuePrintName(#a,a)
     #define vectorPrint(a) vectorPrintReal(#a,a)
     #define vector2Print(a) vector2PrintReal(#a,a)
@@ -61,7 +61,7 @@ int splitPrint(const char* format, ...);
 
 template <typename T>
 int vectorPrintReal(char* name,T vec){
-    #ifdef DEBUG
+    #ifndef NDEBUG
     yellowPrint(name);
     for (int i = 0; i < vec.size(); i++)
     {
@@ -75,7 +75,7 @@ int vectorPrintReal(char* name,T vec){
 
 template <typename T>
 int vector2PrintReal(char* name,T vec){
-    #ifdef DEBUG
+    #ifndef NDEBUG
     yellowPrint(name);
     for (int i = 0; i < vec.size(); i++)
     {
@@ -92,7 +92,7 @@ int vector2PrintReal(char* name,T vec){
 
 template <typename T>
 int mapPrintReal(char* name,T myMap){
-    #ifdef DEBUG
+    #ifndef NDEBUG
     yellowPrint(name);
     for(auto it = myMap.cbegin(); it != myMap.cend(); ++it)
     {

@@ -4,8 +4,8 @@ project(PackageTest CXX)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-add_executable(yahahaExample yahahaTest.cpp)
-target_link_libraries(yahahaExample ${CONAN_LIBS})
+add_executable(yahahaexample yahahaTest.cpp)
+target_link_libraries(yahahaexample ${CONAN_LIBS})
 
 # CTest is a testing tool that can be used to test your project.
 # enable_testing()

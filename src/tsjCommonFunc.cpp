@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string.h>
 #include <stdarg.h> 
-#define MAX_DIGITS 20
+#define MAX_DIGITS 40
 
 
 #include "./include/tsjCommonFunc.h"
@@ -24,7 +24,7 @@ int errorPrint(const char* format, ...){
     va_start(argptr, format);
     vsprintf(tmp_char, format, argptr);
     va_end(argptr);
-    #ifdef DEBUG
+    #ifndef NDEBUG
     std::cout << FRED(<<tmp_char<<) << std::endl;
     #endif
     return 0;
@@ -41,7 +41,7 @@ int passPrint(const char* format, ...){
     va_start(argptr, format);
     vsprintf(tmp_char, format, argptr);
     va_end(argptr);
-    #ifdef DEBUG
+    #ifndef NDEBUG
     std::cout << FGRN(<<tmp_char<<) << std::endl;
     #endif
     return 0;
@@ -57,7 +57,7 @@ int yellowPrint(const char* format, ...){
     va_start(argptr, format);
     vsprintf(tmp_char, format, argptr);
     va_end(argptr);
-    #ifdef DEBUG
+    #ifndef NDEBUG
     std::cout << FYEL(<<tmp_char<<) << std::endl;
     #endif
     return 0;
@@ -74,7 +74,7 @@ int splitPrint(const char* format, ...){
     vsprintf(tmp_char, format, argptr);
     va_end(argptr);
     const char* line=(const char*)"------------------";
-    #ifdef DEBUG
+    #ifndef NDEBUG
     std::cout <<std::endl;
     std::cout <<line<< tmp_char <<line<< std::endl;
     std::cout <<std::endl;

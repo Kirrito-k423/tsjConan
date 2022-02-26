@@ -17,6 +17,6 @@ INCLUDE_DIRECTORIES(include)
 
 message(AUTHOR_WARNING "-----This is shaojiemike PRIVATE Project-----")
 
-ADD_LIBRARY(tsjCommonFunc tsjCommonFunc.cpp)
+ADD_LIBRARY(tsjCommonFuncLib tsjCommonFunc.cpp)
 ADD_EXECUTABLE(greet main.cpp)
-TARGET_LINK_LIBRARIES(greet tsjCommonFunc)
+TARGET_LINK_LIBRARIES(greet tsjCommonFuncLib)
