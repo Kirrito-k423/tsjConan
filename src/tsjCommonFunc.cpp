@@ -9,14 +9,14 @@
 #include <iostream>
 #include <string.h>
 #include <stdarg.h> 
-#define MAX_DIGITS 40
+#define MAX_DIGITS 100
 
 
 #include "./include/tsjCommonFunc.h"
 
 int errorPrint(const char* format, ...){
-    if(strlen(format)> MAX_DIGITS-2){
-        errorPrint("errorPrint input too long than MAX_DIGITS");
+    if(strlen(format)> MAX_DIGITS-30){
+        errorPrint("errorPrint input > MAX_DIGITS");
         return 1;
     }
     char tmp_char[MAX_DIGITS + sizeof(char)];
@@ -32,8 +32,8 @@ int errorPrint(const char* format, ...){
 
 
 int passPrint(const char* format, ...){
-    if(strlen(format)> MAX_DIGITS-2){
-        errorPrint("passPrint input too long than MAX_DIGITS");
+    if(strlen(format)> MAX_DIGITS-30){
+        errorPrint("passPrint input > MAX_DIGITS");
         return 1;
     }
     char tmp_char[MAX_DIGITS + sizeof(char)];
@@ -48,8 +48,8 @@ int passPrint(const char* format, ...){
 }
 
 int yellowPrint(const char* format, ...){
-    if(strlen(format)> MAX_DIGITS-2){
-        errorPrint("yellowPrint input too long than MAX_DIGITS");
+    if(strlen(format)> MAX_DIGITS-30){
+        errorPrint("yellowPrint input > MAX_DIGITS");
         return 1;
     }
     char tmp_char[MAX_DIGITS + sizeof(char)];
@@ -64,8 +64,8 @@ int yellowPrint(const char* format, ...){
 }
 
 int splitPrint(const char* format, ...){
-    if(strlen(format)> MAX_DIGITS-2){
-        errorPrint("splitPrint input too long than MAX_DIGITS");
+    if(strlen(format)> MAX_DIGITS-30){
+        errorPrint("splitPrint input > MAX_DIGITS");
         return 1;
     }
     char tmp_char[MAX_DIGITS + sizeof(char)];

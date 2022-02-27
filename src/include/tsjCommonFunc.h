@@ -52,7 +52,7 @@
     #define vector2Print(a) do { } while(0)
     #define mapPrint(a) do { } while(0)
     #define isEqueue(a,b) do { } while(0)
-#endif  
+#endif  /* NDEBUG */
 
 int errorPrint(const char* format, ...);
 int passPrint(const char* format, ...);
@@ -120,4 +120,4 @@ bool InSet(const T & item, const T & i1, const T & i2, const T & i3) {
   return item==i1 || item==i2 || item==i3;
 }
 
-#endif
+#endif /*__tsjFUNCTION_H__*/

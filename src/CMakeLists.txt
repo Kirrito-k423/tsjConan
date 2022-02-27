@@ -17,6 +17,11 @@ INCLUDE_DIRECTORIES(include)
 
 message(AUTHOR_WARNING "-----This is shaojiemike PRIVATE Project-----")
 
-ADD_LIBRARY(tsjCommonFuncLib tsjCommonFunc.cpp)
+ADD_LIBRARY(
+	tsjCommonFuncLib 
+	tsjCommonFunc.cpp
+	tsjTime.cpp
+)
 ADD_EXECUTABLE(greet main.cpp)
-TARGET_LINK_LIBRARIES(greet tsjCommonFuncLib)
+TARGET_LINK_LIBRARIES(greet PRIVATE tsjCommonFuncLib)
+target_include_directories(greet PUBLIC "./include/")
