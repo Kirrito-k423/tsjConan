@@ -82,4 +82,32 @@ int splitPrint(const char* format, ...){
     return 0;
 }
 
+int colorPrint(const char* color, const char* format, ...){
+    if(strlen(format)> MAX_DIGITS-30){
+        errorPrint("yellowPrint input > MAX_DIGITS");
+        return 1;
+    }
+    char tmp_char[MAX_DIGITS + sizeof(char)];
+    va_list argptr;
+    va_start(argptr, format);
+    vsprintf(tmp_char, format, argptr);
+    va_end(argptr);
+    #ifndef NDEBUG
+    std::cout << color <<tmp_char<< RST << std::endl; //K*** no F***
+    #endif
+    return 0;
+}
 
+
+void testColor(){
+    char tmp_char[30]="color like this!";
+    std::cout << "FRED " <<FRED(<<tmp_char<<) << std::endl;
+    std::cout << "FGRN " <<FGRN(<<tmp_char<<) << std::endl;
+    std::cout << "FYEL " <<FYEL(<<tmp_char<<) << std::endl;
+    std::cout << "FBLU " <<FBLU(<<tmp_char<<) << std::endl;
+    std::cout << "FCYN " <<FCYN(<<tmp_char<<) << std::endl;
+    std::cout << "FMAG " <<FMAG(<<tmp_char<<) << std::endl;
+    std::cout << "FWHT " <<FWHT(<<tmp_char<<) << std::endl;
+    std::cout << "BOLD " <<BOLD(<<tmp_char<<) << std::endl;
+    std::cout << "UNDL " <<UNDL(<<tmp_char<<) << std::endl;
+}

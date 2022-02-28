@@ -21,6 +21,7 @@ ADD_LIBRARY(
 	tsjCommonFuncLib 
 	tsjCommonFunc.cpp
 	tsjTime.cpp
+	tsjDebug.cpp
 )
 ADD_EXECUTABLE(greet main.cpp)
 TARGET_LINK_LIBRARIES(greet PRIVATE tsjCommonFuncLib)

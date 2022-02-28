@@ -58,6 +58,8 @@ int errorPrint(const char* format, ...);
 int passPrint(const char* format, ...);
 int yellowPrint(const char* format, ...);
 int splitPrint(const char* format, ...);
+int colorPrint(const char* color, const char* format, ...);
+void testColor();
 
 template <typename T>
 int vectorPrintReal(char* name,T vec){
