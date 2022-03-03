@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Shaojie Tan
+ * @Date: 2022-02-28 19:35:49
+ * @LastEditors: Shaojie Tan
+ * @LastEditTime: 2022-03-03 15:12:59
+ */
 #ifndef __tsjDebug_H__
 #define __tsjDebug_H__
 #include "tsjCommonFunc.h"
@@ -8,7 +16,7 @@
 
 
 #define functracePrint(fmt,...) \
-	colorPrint(KCYN,"	%s(%d)-<%s>: "##fmt, __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__)
+	colorPrint(KCYN,"	%s(%d)-<%s>: " #fmt, __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__)
 
 class afterReturnPrint{
 	private:
